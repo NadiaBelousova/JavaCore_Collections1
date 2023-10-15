@@ -17,17 +17,17 @@ public class EmployeeController {
         this.service = service;
     }
 
-    @GetMapping("/add")
+    @GetMapping( path = "/add")
     public Employee addEmployee(@RequestParam String firstName, @RequestParam String lastName) {
         return service.add(firstName, lastName);
     }
 
-    @GetMapping("/remove")
+    @GetMapping(path = "/remove")
     public Employee removeEmployee(@RequestParam String firstName, @RequestParam String lastName) {
         return service.remove(firstName, lastName);
     }
 
-    @GetMapping( "/find")
+    @GetMapping(path = "/find")
     public Employee findEmployee(@RequestParam String firstName, @RequestParam String lastName) {
         return service.find(firstName, lastName);
     }
